@@ -1,6 +1,6 @@
 variable "member_name" {
   type = string
-  default = "use_terra"
+  default = "user-terra"
 }
 
 variable "member_mail" {

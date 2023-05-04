@@ -71,3 +71,9 @@
    When the function is tested in GCP, datas are pushed in the BigQuery Database
    The cloud function archive is located in the bucket as a zip file
 ```
+
+## Naming Convention
+```
+   All environnements variables values are in kebab-case
+   All functions and envrionnements variables names are in snake_case
+```
