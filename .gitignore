@@ -1,6 +1,7 @@
 .vscode/
 .terraform/
 *.log
+*.tfstate
 *.tfstate.backup
 *.tfstate.lock.info
 src/node_modules
@@ -10,6 +11,7 @@ src/package-lock.json
 .terraform.lock.hcl
 .theia/
 .docker/
+.npm/
 .redhat/
 .terraform.d/
 .config/
