@@ -1,4 +1,4 @@
-resource "google_storage_bucket" "rendu-bucket" {
+resource "google_storage_bucket" "rendu_bucket" {
   name     = var.bucket_name
   location = "EU"
 }
@@ -9,9 +9,9 @@ data "archive_file" "archive" {
   source_dir  = "${path.module}/../../src"
 }
 
-resource "google_storage_bucket_object" "storage-action" {
+resource "google_storage_bucket_object" "storage_action" {
   name   = "file.${data.archive_file.archive.output_sha}.zip"
-  bucket = google_storage_bucket.rendu-bucket.id
+  bucket = google_storage_bucket.rendu_bucket.id
   source = data.archive_file.archive.output_path
 }
 
@@ -20,8 +20,8 @@ resource "google_cloudfunctions_function" "function" {
   runtime     = "nodejs16"
 
   available_memory_mb   = 128
-  source_archive_bucket = google_storage_bucket.rendu-bucket.name
-  source_archive_object = google_storage_bucket_object.storage-action.name
+  source_archive_bucket = google_storage_bucket.rendu_bucket.name
+  source_archive_object = google_storage_bucket_object.storage_action.name
   trigger_http          = true
   entry_point           = var.entry_point
 }

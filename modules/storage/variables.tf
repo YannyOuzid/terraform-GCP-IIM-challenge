@@ -1,6 +1,6 @@
 variable "bucket_name" {
   type = string
-  default = "ouzid-rendu-04052023"
+  default = "ouzid_rendu_04052023"
 }
 
 variable "archive_name" {
