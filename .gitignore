@@ -3,4 +3,4 @@
 *.log
 *.tfstate.backup
 *.tfstate.lock.info
-./src/node_modules
+src/node_modules
