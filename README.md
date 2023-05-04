@@ -71,7 +71,3 @@
    When the function is tested in GCP, datas are pushed in the BigQuery Database
    The cloud function archive is located in the bucket as a zip file
 ```
-
-    
-```
-
