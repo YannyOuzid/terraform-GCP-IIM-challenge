@@ -14,6 +14,7 @@ provider "google" {
 
 module "iam" {
   source = "./modules/iam"
+  project = var.project
 }
 
 module "storage" {

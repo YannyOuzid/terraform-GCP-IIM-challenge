@@ -54,7 +54,8 @@
 ```
 
 ## How to deploy
-```
+``` 
+    Change the project variable in the variable.tf file of the root folder
     In the src folder : npm install
     In the root folder : terraform init
                          terraform apply

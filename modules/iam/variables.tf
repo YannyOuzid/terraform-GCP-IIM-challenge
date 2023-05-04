@@ -10,5 +10,5 @@ variable "member_mail" {
 
 variable "project" {
   type    = string
-  default = "vigilant-signer-385612"
+  sensitive = true
 }
